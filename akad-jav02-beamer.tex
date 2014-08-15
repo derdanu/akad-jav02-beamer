@@ -61,7 +61,7 @@ morestring=[b]",
   belowskip= 0pt 
 }
 
-\usetheme{Warsaw}
+\usetheme{Frankfurt}
 \usecolortheme[named=OliveGreen]{structure}
 \renewcommand\thempfootnote{\arabic{mpfootnote}}
 
@@ -90,9 +90,9 @@ morestring=[b]",
 %\logo{\includegraphics[scale=0.1]{akad_logo.png}}
 
 %Inhaltsverzeichniss
-\frame{\tableofcontents[hideothersubsections]} 
 
-\section{Daniel Falkner}
+
+\section{Über mich}
 \begin{frame} %%Eine Folie
   \frametitle{Über mich} %%Folientitel
   \framesubtitle{Daniel Falkner} %%Fielenuntertitel
@@ -111,19 +111,22 @@ morestring=[b]",
 
 \section{Java}
 \begin{frame} %%Eine Folie
-  \frametitle{Java} %%Folientitel
-  \begin{block}{Java}
+  \frametitle{Module JAV02} %%Folientitel
+  \framesubtitle{Aufgabe 2} %%Fielenuntertitel
+  \begin{block}{}
 	  \begin{itemize}
 		\item Erläutern Sie ausführlich die elementaren Steuerelemente von Swing wie JLabel, JButton, JComboBox usw.
 	  \end{itemize}
+
   \end{block}
 \end{frame}
 
+\frame{\tableofcontents[currentsection, hideothersubsections]}
 
 \subsection{JLabel}
 \begin{frame} %%Eine Folie
-  \frametitle{statischer Text, nicht editierbar} %%Folientitel
-  \begin{block}{JLabel}
+  \frametitle{JLabel} %%Folientitel
+  \begin{block}{statischer Text, nicht editierbar}
 	  \begin{itemize}
 		\item .
 	  \end{itemize}
@@ -132,8 +135,8 @@ morestring=[b]",
 
 \subsection{JButton}
 \begin{frame} %%Eine Folie
-  \frametitle{Schaltfläche (Button)} %%Folientitel
-  \begin{block}{JButton}
+  \frametitle{JButton} %%Folientitel
+  \begin{block}{Schaltfläche (Button)}
 	  \begin{itemize}
 		\item .
 	  \end{itemize}
@@ -142,18 +145,18 @@ morestring=[b]",
 
 \subsection{JToggleButton}
 \begin{frame} %%Eine Folie
-  \frametitle{Schaltfläche, welche zwei Zustände (gedrückt und nicht gedrückt) kennt.} %%Folientitel
-  \begin{block}{JToggleButton}
+  \frametitle{JToggleButton} %%Folientitel
+  \begin{block}{Schaltfläche, welche zwei Zustände kennt.}
 	  \begin{itemize}
-		\item .
+		\item gedrückt und nicht gedrückt
 	  \end{itemize}
   \end{block}
 \end{frame}
 
 \subsection{JCheckBox}
 \begin{frame} %%Eine Folie
-  \frametitle{Auswahlkästchen, das, wenn es ausgewählt wurde, mit einem Häkchen oder Kreuz versehen wird.} %%Folientitel
-  \begin{block}{JCheckBox}
+  \frametitle{JCheckBox} %%Folientitel
+  \begin{block}{Auswahlkästchen, das, wenn es ausgewählt wurde, mit einem Häkchen oder Kreuz versehen wird.}
 	  \begin{itemize}
 		\item .
 	  \end{itemize}
@@ -162,8 +165,8 @@ morestring=[b]",
 
 \subsection{JRadioButton}
 \begin{frame} %%Eine Folie
-  \frametitle{Schaltfläche zur Auswahl zwischen mehreren Optionen, in der Regel sind sie in einer ButtonGroup angeordnet. Im Gegensatz zur JCheckBox kann nur maximal eine Option selektiert werden.} %%Folientitel
-  \begin{block}{JRadioButton}
+  \frametitle{JRadioButton} %%Folientitel
+  \begin{block}{Schaltfläche zur Auswahl zwischen mehreren Optionen, in der Regel sind sie in einer ButtonGroup angeordnet. Im Gegensatz zur JCheckBox kann nur maximal eine Option selektiert werden.}
 	  \begin{itemize}
 		\item .
 	  \end{itemize}
@@ -173,8 +176,8 @@ morestring=[b]",
 
 \subsection{JComboBox}
 \begin{frame} %%Eine Folie
-  \frametitle{Dropdown-Liste (auch als Auswahlliste oder Listbox bezeichnet), die zur Auswahl eines Elementes aufgeklappt wird. Wenn die JComboBox editierbar ist, kann über ein Textfeld der ausgewählte Wert auch vom Anwender gesetzt werden.} %%Folientitel
-  \begin{block}{JComboBox}
+  \frametitle{JComboBox} %%Folientitel
+  \begin{block}{Dropdown-Liste (auch als Auswahlliste oder Listbox bezeichnet), die zur Auswahl eines Elementes aufgeklappt wird. Wenn die JComboBox editierbar ist, kann über ein Textfeld der ausgewählte Wert auch vom Anwender gesetzt werden.}
 	  \begin{itemize}
 		\item .
 	  \end{itemize}
@@ -184,8 +187,8 @@ morestring=[b]",
 
 \subsection{JList}
 \begin{frame} %%Eine Folie
-  \frametitle{Einfache Liste, die mehrere Elemente enthalten kann. Einfach- und Mehrfachauswahl möglich.} %%Folientitel
-  \begin{block}{JList}
+  \frametitle{JList} %%Folientitel
+  \begin{block}{Einfache Liste, die mehrere Elemente enthalten kann. Einfach- und Mehrfachauswahl möglich.}
 	  \begin{itemize}
 		\item .
 	  \end{itemize}
@@ -194,9 +197,9 @@ morestring=[b]",
 
 \subsection{JTextField}
 \begin{frame} %%Eine Folie
-  \frametitle{einfache einzeilige Texteingabe
+  \frametitle{JTextField
 } %%Folientitel
-  \begin{block}{JTextField}
+  \begin{block}{einfache einzeilige Texteingabe}
 	  \begin{itemize}
 		\item .
 	  \end{itemize}
@@ -205,9 +208,9 @@ morestring=[b]",
 
 \subsection{JTextArea}
 \begin{frame} %%Eine Folie
-  \frametitle{einfache mehrzeilige Texteingabe
+  \frametitle{JTextArea
 } %%Folientitel
-  \begin{block}{JTextArea}
+  \begin{block}{einfache mehrzeilige Texteingabe}
 	  \begin{itemize}
 		\item .
 	  \end{itemize}
@@ -216,9 +219,9 @@ morestring=[b]",
 
 \subsection{JScrollBar}
 \begin{frame} %%Eine Folie
-  \frametitle{Schieberregler zum Scrollen.
+  \frametitle{JScrollBar
 } %%Folientitel
-  \begin{block}{JScrollBar}
+  \begin{block}{Schieberregler zum Scrollen.}
 	  \begin{itemize}
 		\item .
 	  \end{itemize}
@@ -227,9 +230,9 @@ morestring=[b]",
 
 \subsection{JSlider}
 \begin{frame} %%Eine Folie
-  \frametitle{Schieberregler, der mit einer Skala versehen werden kann.
+  \frametitle{JSlider
 } %%Folientitel
-  \begin{block}{JSlider}
+  \begin{block}{Schieberregler, der mit einer Skala versehen werden kann.}
 	  \begin{itemize}
 		\item .
 	  \end{itemize}
@@ -238,8 +241,8 @@ morestring=[b]",
 
 \subsection{JProgressBar}
 \begin{frame} %%Eine Folie
-  \frametitle{Fortschrittsbalken} %%Folientitel
-  \begin{block}{JProgressBar}
+  \frametitle{JProgressBar} %%Folientitel
+  \begin{block}{Fortschrittsbalken}
 	  \begin{itemize}
 		\item .
 	  \end{itemize}
@@ -248,9 +251,9 @@ morestring=[b]",
 
 \subsection{JSpinner}
 \begin{frame} %%Eine Folie
-  \frametitle{Ähnlich der JComboBox, allerdings klappt die Liste nicht auf, sondern die Navigation durch die Liste erfolgt über Pfeiltasten.
+  \frametitle{JSpinner
 } %%Folientitel
-  \begin{block}{JSpinner}
+  \begin{block}{Ähnlich der JComboBox, allerdings klappt die Liste nicht auf, sondern die Navigation durch die Liste erfolgt über Pfeiltasten.}
 	  \begin{itemize}
 		\item .
 	  \end{itemize}
@@ -259,9 +262,9 @@ morestring=[b]",
 
 \subsection{JSeparator}
 \begin{frame} %%Eine Folie
-  \frametitle{einfache Trennlinie
+  \frametitle{JSeparator
 } %%Folientitel
-  \begin{block}{JSeparator}
+  \begin{block}{einfache Trennlinie}
 	  \begin{itemize}
 		\item .
 	  \end{itemize}
