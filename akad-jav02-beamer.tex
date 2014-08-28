@@ -123,13 +123,32 @@ morestring=[b]",
 
 
 \subsection{JLabel}
-\begin{frame} %%Eine Folie
+\begin{frame}[fragile, shrink] %%Eine Folie
   \frametitle{JLabel} %%Folientitel
   \begin{block}{statischer Text, nicht editierbar}
-	  \begin{itemize}
-		\item .
-	  \end{itemize}
+
   \end{block}
+
+\begin{lstlisting}[language=java,basicstyle=\scriptsize\ttfamily]
+// Wir holen uns ein Icon aus dem dem Java Look and Feel
+        Icon icon = MetalIconFactory.getFileChooserHomeFolderIcon();
+ 
+        // Wir erstellen ein JLabel mit einem Text und unserem Icon
+        // Die horizontale Ausrichtung setzen wir auf "CENTER"
+        JLabel label = new JLabel ("My 127.0.0.1 is my castle", 
+            icon, JLabel.CENTER);
+ 
+        // Die vertikale Ausrichtung des JLabels setzen wir auf "TOP"
+        label.setVerticalAlignment(JLabel.TOP);
+ 
+        // Die relative Ausrichtung des Textes zum Icon setzen wir auf "LEFT"
+        label.setHorizontalTextPosition(JLabel.LEFT);	
+\end{lstlisting}
+
+ 
+
+  
+
 \end{frame}
 
 \subsubsection{Demo}
@@ -143,13 +162,20 @@ morestring=[b]",
 
 
 \subsection{JButton}
-\begin{frame} %%Eine Folie
+\begin{frame}[fragile]  %%Eine Folie
   \frametitle{JButton} %%Folientitel
   \begin{block}{Schaltfläche (Button)}
 	  \begin{itemize}
-		\item .
+		\item Vergleichbar mit einem Taster
 	  \end{itemize}
   \end{block}
+\begin{lstlisting}[language=java,basicstyle=\scriptsize\ttfamily]
+// JButton mit Text "Drueck mich" wird erstellt
+        JButton button = new JButton("Drueck mich");
+ 
+        // JButton wird dem Panel hinzugefuegt
+        panel.add(button);
+\end{lstlisting}
 \end{frame}
 
 \subsubsection{Demo}
@@ -163,13 +189,25 @@ morestring=[b]",
 
 
 \subsection{JToggleButton}
-\begin{frame} %%Eine Folie
+\begin{frame}[fragile, shrink]  %%Eine Folie
   \frametitle{JToggleButton} %%Folientitel
   \begin{block}{Schaltfläche, welche zwei Zustände kennt.}
 	  \begin{itemize}
 		\item gedrückt und nicht gedrückt
+		\item Vergleichbar einem Schalter
 	  \end{itemize}
   \end{block}
+
+\begin{lstlisting}[language=java,basicstyle=\scriptsize\ttfamily]
+
+// JToggleButton mit Text "Drueck mich" wird erstellt
+        JToggleButton toggleButton = new JToggleButton("Drueck mich", true);
+ 
+        // JToggleButton wird dem Panel hinzugefuegt
+        panel.add(toggleButton);
+
+\end{lstlisting}
+
 \end{frame}
 
 
@@ -188,13 +226,22 @@ morestring=[b]",
 
 
 \subsection{JCheckBox}
-\begin{frame} %%Eine Folie
+\begin{frame}[fragile, shrink]  %%Eine Folie
   \frametitle{JCheckBox} %%Folientitel
   \begin{block}{Auswahlkästchen, das, wenn es ausgewählt wurde, mit einem Häkchen oder Kreuz versehen wird.}
 	  \begin{itemize}
 		\item .
 	  \end{itemize}
   \end{block}
+
+\begin{lstlisting}[language=java,basicstyle=\scriptsize\ttfamily]
+
+   //JCheckBoxen werden erstellt
+        JCheckBox checkBoxMilch = new JCheckBox("Milch");
+        JCheckBox checkBoxZucker = new JCheckBox("Zucker");
+
+\end{lstlisting}
+
 \end{frame}
 
 
@@ -209,13 +256,21 @@ morestring=[b]",
 
 
 \subsection{JRadioButton}
-\begin{frame} %%Eine Folie
+\begin{frame}[fragile, shrink]  %%Eine Folie
   \frametitle{JRadioButton} %%Folientitel
   \begin{block}{Schaltfläche zur Auswahl zwischen mehreren Optionen, in der Regel sind sie in einer ButtonGroup angeordnet. Im Gegensatz zur JCheckBox kann nur maximal eine Option selektiert werden.}
 	  \begin{itemize}
 		\item .
 	  \end{itemize}
   \end{block}
+
+\begin{lstlisting}[language=java,basicstyle=\scriptsize\ttfamily]
+
+ // Hier wird ein selektierter JRadioButton erstellt
+        JRadioButton radio = new JRadioButton ("Ich bin ein RadioButton", true);
+
+\end{lstlisting}
+
 \end{frame}
 
 \subsubsection{Demo}
@@ -229,13 +284,29 @@ morestring=[b]",
 
 
 \subsection{JComboBox}
-\begin{frame} %%Eine Folie
+\begin{frame}[fragile, shrink]  %%Eine Folie
   \frametitle{JComboBox} %%Folientitel
   \begin{block}{Dropdown-Liste (auch als Auswahlliste oder Listbox bezeichnet), die zur Auswahl eines Elementes aufgeklappt wird. Wenn die JComboBox editierbar ist, kann über ein Textfeld der ausgewählte Wert auch vom Anwender gesetzt werden.}
 	  \begin{itemize}
 		\item .
 	  \end{itemize}
   \end{block}
+
+\begin{lstlisting}[language=java,basicstyle=\scriptsize\ttfamily]
+
+    	// Array fuer unsere JComboBox
+        String comboBoxListe[] = {"Baden-Wuerttemberg", "Bayern",
+            "Berlin", "Brandenburg", "Bremen",
+            "Hamburg", "Hessen", "Mecklenburg-Vorpommern",
+            "Niedersachsen", "Nordrhein-Westfalen", "Rheinland-Pfalz",
+            "Saarland", "Sachsen", "Sachsen-Anhalt",
+            "Schleswig-Holstein", "Thueringen"};
+ 
+        //JComboBox mit Bundeslaender-Eintraegen wird erstellt
+        JComboBox bundeslandAuswahl = new JComboBox(comboBoxListe);
+
+\end{lstlisting}
+
 \end{frame}
 
 \subsubsection{Demo}
@@ -249,13 +320,25 @@ morestring=[b]",
 
 
 \subsection{JList}
-\begin{frame} %%Eine Folie
+\begin{frame}[fragile, shrink]  %%Eine Folie
   \frametitle{JList} %%Folientitel
   \begin{block}{Einfache Liste, die mehrere Elemente enthalten kann. Einfach- und Mehrfachauswahl möglich.}
 	  \begin{itemize}
 		\item .
 	  \end{itemize}
   \end{block}
+
+\begin{lstlisting}[language=java,basicstyle=\scriptsize\ttfamily]
+
+ // Array fuer unsere JList
+        String interessen[] = {"Politik", "Autos", "Mode", 
+            "Film- und Fernsehen", "Computer", "Tiere", "Sport"};
+ 
+        //JList mit Eintraegen wird erstellt
+        JList themenAuswahl = new JList(interessen);
+
+\end{lstlisting}
+
 \end{frame}
 
 \subsubsection{Demo}
@@ -270,7 +353,7 @@ morestring=[b]",
 
 
 \subsection{JTextField}
-\begin{frame} %%Eine Folie
+\begin{frame}[fragile, shrink]  %%Eine Folie
   \frametitle{JTextField
 } %%Folientitel
   \begin{block}{einfache einzeilige Texteingabe}
@@ -278,6 +361,19 @@ morestring=[b]",
 		\item .
 	  \end{itemize}
   \end{block}
+
+\begin{lstlisting}[language=java,basicstyle=\scriptsize\ttfamily]
+
+// Textfeld wird erstellt
+        // Text und Spaltenanzahl werden dabei direkt gesetzt
+        JTextField tfName = new JTextField("Paul Programmierer", 15);
+        // Schriftfarbe wird gesetzt
+        tfName.setForeground(Color.BLUE);
+        // Hintergrundfarbe wird gesetzt
+        tfName.setBackground(Color.YELLOW);
+
+\end{lstlisting}
+
 \end{frame}
 
 
@@ -291,7 +387,7 @@ morestring=[b]",
 \end{frame}
 
 \subsection{JTextArea}
-\begin{frame} %%Eine Folie
+\begin{frame}[fragile, shrink]  %%Eine Folie
   \frametitle{JTextArea
 } %%Folientitel
   \begin{block}{einfache mehrzeilige Texteingabe}
@@ -299,6 +395,30 @@ morestring=[b]",
 		\item .
 	  \end{itemize}
   \end{block}
+
+\begin{lstlisting}[language=java,basicstyle=\scriptsize\ttfamily]
+
+ //5-zeiliges und 20-spaltiges Textfeld wird erzeugt
+        JTextArea textfeld = new JTextArea(5, 20);
+ 
+        //Text fuer das Textfeld wird gesetzt
+        textfeld.setText("Lorem ipsum dolor sit amet, " +
+        		"consetetur sadipscing elitr, sed diam nonumy " +
+        		"eirmod tempor invidunt ut labore et " +
+        		"dolore magna aliquyam erat, sed diam voluptua. " +
+        		"At vero eos et accusam et justo duo dolores et " +
+                        "ea rebum.");
+        //Zeilenumbruch wird eingeschaltet
+        textfeld.setLineWrap(true);
+ 
+        //Zeilenumbrueche erfolgen nur nach ganzen Woertern
+        textfeld.setWrapStyleWord(true);
+ 
+        //Ein JScrollPane, der das Textfeld beinhaltet, wird erzeugt
+        JScrollPane scrollpane = new JScrollPane(textfeld); 
+
+\end{lstlisting}
+
 \end{frame}
 
 \subsubsection{Demo}
@@ -312,7 +432,7 @@ morestring=[b]",
 
 
 \subsection{JScrollBar}
-\begin{frame} %%Eine Folie
+\begin{frame}[fragile, shrink]  %%Eine Folie
   \frametitle{JScrollBar
 } %%Folientitel
   \begin{block}{Schieberregler zum Scrollen.}
@@ -320,6 +440,15 @@ morestring=[b]",
 		\item .
 	  \end{itemize}
   \end{block}
+
+\begin{lstlisting}[language=java,basicstyle=\scriptsize\ttfamily]
+
+        //JScrollBar wird erzeugt
+        JScrollBar scrollbar = new JScrollBar
+                (JScrollBar.HORIZONTAL, 30, 10, 0, 100);
+
+\end{lstlisting}
+
 \end{frame}
 
 
@@ -334,14 +463,44 @@ morestring=[b]",
 
 
 \subsection{JSlider}
-\begin{frame} %%Eine Folie
+\begin{frame}[fragile, shrink]  %%Eine Folie
   \frametitle{JSlider
 } %%Folientitel
   \begin{block}{Schieberregler, der mit einer Skala versehen werden kann.}
 	  \begin{itemize}
-		\item .
+		\item Lautstärkeregler
 	  \end{itemize}
   \end{block}
+
+\begin{lstlisting}[language=java,basicstyle=\scriptsize\ttfamily]
+
+// JSlider-Objekt wird erzeugt
+		JSlider meinSlider = new JSlider();
+ 
+		// Mindestwert wird gesetzt
+		meinSlider.setMinimum(0);
+		// Maximalwert wird gesetzt
+		meinSlider.setMaximum(20);
+ 
+		// Die Abstaende zwischen den 
+		// Teilmarkierungen werden festgelegt
+		meinSlider.setMajorTickSpacing(5);
+		meinSlider.setMinorTickSpacing(1);
+ 
+		// Standardmarkierungen werden erzeugt 
+		meinSlider.createStandardLabels(1);
+ 
+		// Zeichnen der Markierungen wird aktiviert
+		meinSlider.setPaintTicks(true);
+ 
+		// Zeichnen der Labels wird aktiviert
+		meinSlider.setPaintLabels(true);
+ 
+		// Schiebebalken wird auf den Wert 9 gesetzt
+		meinSlider.setValue(9);
+
+\end{lstlisting}
+
 \end{frame}
 
 \subsubsection{Demo}
@@ -355,13 +514,29 @@ morestring=[b]",
 
 
 \subsection{JProgressBar}
-\begin{frame} %%Eine Folie
+\begin{frame}[fragile, shrink]  %%Eine Folie
   \frametitle{JProgressBar} %%Folientitel
   \begin{block}{Fortschrittsbalken}
 	  \begin{itemize}
-		\item .
+		\item für Download oder Update
+		\item Bearbeitung von längeren Berechnungen
 	  \end{itemize}
   \end{block}
+
+\begin{lstlisting}[language=java,basicstyle=\scriptsize\ttfamily]
+
+// JProgressBar-Objekt wird erzeugt
+		JProgressBar meinLadebalken = new JProgressBar(0, 100);
+ 
+		// Wert fuer den Ladebalken wird gesetzt
+		meinLadebalken.setValue(0);
+ 
+		// Der aktuelle Wert wird als 
+		// Text in Prozent angezeigt
+		meinLadebalken.setStringPainted(true);
+
+\end{lstlisting}
+
 \end{frame}
 
 \subsubsection{Demo}
@@ -374,14 +549,22 @@ morestring=[b]",
 \end{frame}
 
 \subsection{JSpinner}
-\begin{frame} %%Eine Folie
+\begin{frame}[fragile, shrink]  %%Eine Folie
   \frametitle{JSpinner
 } %%Folientitel
   \begin{block}{Ähnlich der JComboBox, allerdings klappt die Liste nicht auf, sondern die Navigation durch die Liste erfolgt über Pfeiltasten.}
 	  \begin{itemize}
-		\item .
+		\item Warenkorb 
 	  \end{itemize}
   \end{block}
+
+\begin{lstlisting}[language=java,basicstyle=\scriptsize\ttfamily]
+
+//JSpinner wird erzeugt
+		JSpinner spinner = new JSpinner();
+
+\end{lstlisting}
+
 \end{frame}
 
 \subsubsection{Demo}
@@ -394,14 +577,22 @@ morestring=[b]",
 \end{frame}
 
 \subsection{JSeparator}
-\begin{frame} %%Eine Folie
+\begin{frame}[fragile, shrink]  %%Eine Folie
   \frametitle{JSeparator
 } %%Folientitel
   \begin{block}{einfache Trennlinie}
 	  \begin{itemize}
-		\item .
+		\item optische Abgrenzung zwischen Blocken
 	  \end{itemize}
   \end{block}
+
+\begin{lstlisting}[language=java,basicstyle=\scriptsize\ttfamily]
+
+        // Erzeugung eines Objektes der Klasse JSeparator
+        JSeparator sep = new JSeparator();
+
+\end{lstlisting}
+
 \end{frame}
 
 \subsubsection{Demo}
@@ -422,7 +613,7 @@ morestring=[b]",
 			Fragen?
 		\end{center}	
 	\end{block}
-	\begin{block}{Link zum Präsentation}	
+	\begin{block}{Link zur Präsentation}	
 		\begin{itemize}
 			\item \url{https://github.com/derdanu/akad-jav02-beamer}
 		\end{itemize}
